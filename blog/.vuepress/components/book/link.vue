@@ -43,7 +43,7 @@ export default {
   gap: 8px;
 
   &:hover &-cover {
-    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.6);
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.3);
   }
 
   & p {
