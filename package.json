@@ -1,0 +1,17 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vuepress dev blog --temp .temp",
+    "build": "vuepress build blog"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "echarts": "^4.8.0"
+  },
+  "devDependencies": {
+    "vuepress": "^1.9.0",
+    "vuepress-plugin-latex": "^0.1.3"
+  }
+}
