@@ -61,6 +61,8 @@ const DEFAULT_FORCE = {
 };
 
 export default {
+  name: 'knowledge-graph',
+
   props: {
     /**
      * 宽度，默认 100%

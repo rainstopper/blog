@@ -1,4 +1,4 @@
-<!-- 异步加载的知识图谱组件 -->
+<!-- 自动加载的知识图谱组件 -->
 <!-- 封装了知识图谱组件 -->
 <!-- 默认加载 /data/knowledge 下与 this.$route.path 对应目录下的 nodes.json 和 edges.json 资源 -->
 
@@ -18,6 +18,8 @@
 
 <script>
 export default {
+  name: 'knowledge-graph-auto-fetch',
+
   props: {
     /**
      * 宽度
