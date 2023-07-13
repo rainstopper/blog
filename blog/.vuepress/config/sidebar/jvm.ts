@@ -8,9 +8,9 @@ export default {
       // sidebarDepth: 2,
       children: [
         // 介绍
-        '',
+        '/java/jvm/',
         // 字节码
-        'bytecode',
+        '/java/jvm/bytecode',
       ],
     },
   ],
