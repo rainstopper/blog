@@ -26,23 +26,6 @@ export default defineUserConfig({
 
     sidebar,
   }),
-  // themeConfig: {
-  //   /**
-  //    * 导航栏
-  //    * 如果开启了多语言配置，locales 内部的 nav 会覆盖这里的配置
-  //    */
-  //   nav,
-
-  //   /**
-  //    * 侧边栏
-  //    */
-  //   sidebar,
-
-  //   /**
-  //    * 启用页面滚动效果
-  //    */
-  //   smoothScroll: true,
-  // },
 
   /**
    * 插件
@@ -57,9 +40,5 @@ export default defineUserConfig({
    * Markdown 配置
    */
   markdown: {
-    /**
-     * 是否在每个代码块的左侧显示行号，默认 undefined
-     */
-    // lineNumbers: true,
   },
 });
