@@ -2,7 +2,7 @@
 <!-- 封装了知识图谱组件 -->
 <!-- 默认加载 /data/knowledge 下与 this.$route.path 对应目录下的 nodes.json 和 edges.json 资源 -->
 
-<template lang="html">
+<template>
   <knowledge-graph
     :width="width"
     :height="height"
@@ -145,8 +145,8 @@ export default {
     this.loading = true;
     const { _nodesUrl, _edgesUrl } = this;
     Promise.all([
-      this.$http.get(this.$withBase(_nodesUrl)),
-      this.$http.get(this.$withBase(_edgesUrl)),
+      fetch(this.$withBase(_nodesUrl)).then(res => res.json()),
+      fetch(this.$withBase(_edgesUrl)).then(res => res.json()),
     ]).then(([nodes, edges]) => {
       this.nodes = nodes;
       this.edges = edges;

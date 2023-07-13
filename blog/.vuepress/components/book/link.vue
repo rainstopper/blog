@@ -8,35 +8,31 @@
   </a>
 </template>
 
-<script>
-export default {
-  name: 'book-link',
+<script lang="ts" setup>
+const props = defineProps({
+  /**
+   * Cover Image
+   */
+  cover: String,
 
-  props: {
-    /**
-     * Cover Image
-     */
-    cover: String,
+  /**
+   * Name
+   */
+  name: String,
 
-    /**
-     * Name
-     */
-    name: String,
+  /**
+   * Author
+   */
+  author: String,
 
-    /**
-     * Author
-     */
-    author: String,
-
-    /**
-     * href
-     */
-    href: String,
-  },
-};
+  /**
+   * href
+   */
+  href: String,
+});
 </script>
 
-<style lang="stylus" scoped>
+<style lang="scss" scoped>
 .book-link {
   display: flex;
   flex-direction: column;

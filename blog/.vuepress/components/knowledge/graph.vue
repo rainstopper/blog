@@ -1,6 +1,6 @@
 <!-- 知识图谱 -->
 
-<template lang="html">
+<template>
   <div class="knowledge-graph" :style="`width: ${width}; height: ${height};`">
     <!-- 支持 Vue 响应式的 ECharts 组件 -->
     <responsive-echarts
@@ -560,93 +560,106 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
-BORDER_RADIUS = 3px
-BORDER_COLOR = #cfd4db
-BORDER_COLOR_LIGHT = #eee
-LABEL_WIDTH = 60px
+<style lang="scss" scoped>
+$BORDER_RADIUS: 3px;
+$BORDER_COLOR: #cfd4db;
+$BORDER_COLOR_LIGHT: #eee;
+$LABEL_WIDTH: 60px;
 
-.knowledge-graph
-  position relative
-  margin 20px auto
-  border 1px solid BORDER_COLOR_LIGHT
+.knowledge-graph {
+  position: relative;
+  margin: 20px auto;
+  border: 1px solid $BORDER_COLOR_LIGHT;
 
   /**
    * 搜索工具样式
    */
-  .search-tool
-    position absolute
-    top 0
-    right 0
-    padding 5px
-    background-color rgba(255, 255, 255, 0.6)
+  .search-tool {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
 
     // .search-tool .item
-    .item
-      padding 5px
-      font-size 14px
+    .item {
+      padding: 5px;
+      font-size: 14px;
 
       // .search-tool .item label
-      label
-        width LABEL_WIDTH
-        height 100%
-        text-align right
-        vertical-align middle
-        float left
-        padding 0 12px 0 0
-        box-sizing border-box
-        line-height 22px
+      label {
+        width: $LABEL_WIDTH;
+        height: 100%;
+        text-align: right;
+        vertical-align: middle;
+        float: left;
+        padding: 0 12px 0 0;
+        box-sizing: border-box;
+        line-height: 22px;
+      }
 
       // .search-tool .item .content
-      .content
-        position relative
-        margin-left LABEL_WIDTH
+      .content {
+        position: relative;
+        margin-left: $LABEL_WIDTH;
 
         // .search-tool .item .content .input
-        .input
+        .input {
           // .search-tool .item .content .input input
-          input
-            width 10rem
-            border 1px solid BORDER_COLOR
-            border-radius BORDER_RADIUS
-            padding 2px 1.2rem 2px 5px
-            outline none
-            background #fff url("~@vuepress/plugin-search/search.svg") 8.9rem 0.2rem no-repeat // 使用默认主题的搜索 svg 图标
-            box-sizing border-box
-            font-size 14px
+          input {
+            width: 10rem;
+            border: 1px solid $BORDER_COLOR;
+            border-radius: $BORDER_RADIUS;
+            padding: 2px 1.2rem 2px 5px;
+            outline: none;
+            // 使用默认主题的搜索 svg 图标
+            background: #fff url("~@vuepress/plugin-search/search.svg") 8.9rem 0.2rem no-repeat;
+            box-sizing: border-box;
+            font-size: 14px;
 
             // .search-tool .item .content .input input:focus
-            &:focus
-              border-color #3eaf7c
+            &:focus {
+              border-color: #3eaf7c;
+            }
+          }
 
           // .search-tool .item .content .input .options
-          .options
-            position absolute
-            top 10px
-            left 0
-            max-height 200px
-            overflow-y auto
-            border 1px solid BORDER_COLOR
-            border-radius BORDER_RADIUS
-            padding 0
-            list-style none
-            background-color #fff
+          .options {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid $BORDER_COLOR;
+            border-radius: $BORDER_RADIUS;
+            padding: 0;
+            list-style: none;
+            background-color: #fff;
 
             // .search-tool .item .content .input .options .option
-            .option
-              min-width 9.9rem
-              border-bottom 1px solid BORDER_COLOR_LIGHT
-              padding 3px 6px
-              box-sizing border-box
-              line-height 20px
-              font-size 14px
-              cursor pointer
+            .option {
+              min-width: 9.9rem;
+              border-bottom: 1px solid $BORDER_COLOR_LIGHT;
+              padding: 3px 6px;
+              box-sizing: border-box;
+              line-height: 20px;
+              font-size: 14px;
+              cursor: pointer;
 
               // .search-tool .item .content .input .options .option:last-of-type
-              &:last-of-type
-                border 0
+              &:last-of-type {
+                border: 0;
+              }
 
               // .search-tool .item .content .input .options .option:hover
-              &:hover
-                background-color: #f3f5f7
+              &:hover {
+                background-color: #f3f5f7;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 </style>

@@ -2,7 +2,7 @@
 title: 封面
 ---
 
-![封面](./images/7-rules-of-power_cover.png)
+![封面](/images/books/7-rules-of-power_cover.png)
 
 《权力七规则：令人惊讶的——但是真的——关于工作和事业发展的建议》
 

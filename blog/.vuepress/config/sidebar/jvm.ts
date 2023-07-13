@@ -1,9 +1,11 @@
+import { SidebarConfig } from 'vuepress';
+
 export default {
   '/java/jvm/': [
     {
-      title: 'JVM',
-      collapsable: false,
-      sidebarDepth: 2,
+      text: 'JVM',
+      collapsible: false,
+      // sidebarDepth: 2,
       children: [
         // 介绍
         '',
@@ -12,4 +14,4 @@ export default {
       ],
     },
   ],
-};
+} as SidebarConfig;

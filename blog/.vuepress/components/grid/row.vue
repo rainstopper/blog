@@ -1,44 +1,33 @@
 <!-- Grid Row -->
 
 <template>
-  <div class="grid-row" :style="style">
+  <div class="grid-row" :style="{ margin: `-${halfGutter}px` }">
     <slot />
   </div>
 </template>
 
-<script>
-export default {
+<script setup>
+import { computed } from 'vue';
+
+const props = defineProps({
+  /**
+   * Gutter
+   */
+  gutter: {
+    type: Number,
+    default: 0,
+  },
+});
+
+/**
+ * Half value of the gutter
+ */
+const halfGutter = computed(() => props.gutter / 2);
+
+defineExpose({
   name: 'grid-row',
-
-  props: {
-    /**
-     * Gutter
-     */
-    gutter: {
-      type: Number,
-      default: 0,
-    },
-  },
-
-  computed: {
-    /**
-     * Half value of the gutter
-     * @return {Number}
-     */
-    halfGutter() {
-      return this.gutter / 2;
-    },
-
-    /**
-     * Style
-     * @return {Object}
-     */
-    style() {
-      const halfMargin = `-${this.halfGutter}px`;
-      return { margin: halfMargin };
-    },
-  },
-};
+  halfGutter,
+});
 </script>
 
 <style scoped>

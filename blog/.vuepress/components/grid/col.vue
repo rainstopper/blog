@@ -1,35 +1,37 @@
 <!-- Grid Col -->
 
 <template>
-  <div class="grid-col" :style="style">
+  <div
+    class="grid-col"
+    :style="{ width: `${span}%`, padding: `${getHalfGutter($parent)}px` }"
+  >
     <slot />
   </div>
 </template>
 
-<script>
-export default {
-  name: 'grid-col',
-
-  props: {
-    /**
-     * Span
-     */
-    span: {
-      type: Number,
-      default: 100,
-    },
+<script setup>
+const props = defineProps({
+  /**
+   * Span
+   */
+  span: {
+    type: Number,
+    default: 100,
   },
+});
 
-  computed: {
-    /**
-     * Style
-     * @return {Object}
-     */
-    style() {
-      const halfPadding = `${this.$parent.halfGutter || 0}px`;
-      return { width: `${this.span}%`, padding: halfPadding };
-    },
-  },
+/**
+ * Get half gutter from parents
+ */
+const getHalfGutter = el => {
+  let row = el;
+  while (row) {
+    if (row.name === 'grid-row') {
+      return row.halfGutter;
+    }
+    row = row.$parent;
+  }
+  return 0;
 };
 </script>
 

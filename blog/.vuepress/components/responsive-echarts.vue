@@ -1,6 +1,6 @@
 <!-- 响应式的 ECharts 组件 -->
 
-<template lang="html">
+<template>
   <div
     class="responsive-echarts"
     :style="`width: ${width}; height: ${height};`"

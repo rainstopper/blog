@@ -15,18 +15,21 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'book-catalog',
+<script lang="ts" setup>
+interface Book {
+  cover: string;
+  name: string;
+  author: string;
+  href?: string;
+}
 
-  props: {
-    /**
-     * Data
-     */
-    data: {
-      type: Array,
-      default: () => [],
-    },
+const props = defineProps({
+  /**
+   * Data
+   */
+  data: {
+    type: Array<Book>,
+    default: () => [],
   },
-};
+});
 </script>

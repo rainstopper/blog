@@ -1,8 +1,10 @@
+import { SidebarConfig } from 'vuepress';
+
 export default {
   '/read/7-rules-of-power/': [
     {
-      title: '7 Rules of Power',
-      collapsable: false,
+      text: '7 Rules of Power',
+      collapsible: false,
       children: [
         '',
         'translation-contents',
@@ -10,4 +12,4 @@ export default {
       ],
     },
   ],
-};
+} as SidebarConfig;

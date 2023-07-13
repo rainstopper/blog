@@ -13,59 +13,58 @@ sidebar: auto
 
 <book-catalog :data="other" />
 
-<script>
-export default {
-  data() {
-    return {
-      power: [
-        {
-          cover: require('./7-rules-of-power/images/7-rules-of-power_cover.png'),
-          name: '7 Rules of Power',
-          author: 'Jeffrey Pfeffer',
-          href: './7-rules-of-power/',
-        },
-        {
-          cover: require('./7-rules-of-power/images/7-rules-of-power_cover.png'),
-          name: '7 Rules of Power',
-          author: 'Jeffrey Pfeffer',
-          href: './7-rules-of-power/',
-        },
-        {
-          cover: require('./7-rules-of-power/images/7-rules-of-power_cover.png'),
-          name: '7 Rules of Power',
-          author: 'Jeffrey Pfeffer',
-          href: './7-rules-of-power/',
-        },
-        {
-          cover: require('./7-rules-of-power/images/7-rules-of-power_cover.png'),
-          name: '7 Rules of Power',
-          author: 'Jeffrey Pfeffer',
-          href: './7-rules-of-power/',
-        },
-        {
-          cover: require('./7-rules-of-power/images/7-rules-of-power_cover.png'),
-          name: '7 Rules of Power',
-          author: 'Jeffrey Pfeffer',
-          href: './7-rules-of-power/',
-        },
-      ],
-      other: [
-        {
-          cover: require('./7-rules-of-power/images/7-rules-of-power_cover.png'),
-          name: '7 Rules of Power',
-          author: 'Jeffrey Pfeffer',
-          href: './7-rules-of-power/',
-        },
-        {
-          cover: require('./7-rules-of-power/images/7-rules-of-power_cover.png'),
-          name: '7 Rules of Power',
-          author: 'Jeffrey Pfeffer',
-          href: './7-rules-of-power/',
-        },
-      ],
-    };
+<script setup>
+import { withBase } from '@vuepress/client';
+
+const sevenRulesOfPower = withBase('/images/books/7-rules-of-power_cover.png');
+
+const power = [
+  {
+    cover: sevenRulesOfPower,
+    name: '7 Rules of Power',
+    author: 'Jeffrey Pfeffer',
+    href: './7-rules-of-power/',
   },
-};
+  {
+    cover: sevenRulesOfPower,
+    name: '7 Rules of Power',
+    author: 'Jeffrey Pfeffer',
+    href: './7-rules-of-power/',
+  },
+  {
+    cover: sevenRulesOfPower,
+    name: '7 Rules of Power',
+    author: 'Jeffrey Pfeffer',
+    href: './7-rules-of-power/',
+  },
+  {
+    cover: sevenRulesOfPower,
+    name: '7 Rules of Power',
+    author: 'Jeffrey Pfeffer',
+    href: './7-rules-of-power/',
+  },
+  {
+    cover: sevenRulesOfPower,
+    name: '7 Rules of Power',
+    author: 'Jeffrey Pfeffer',
+    href: './7-rules-of-power/',
+  },
+];
+
+const other = [
+  {
+    cover: sevenRulesOfPower,
+    name: '7 Rules of Power',
+    author: 'Jeffrey Pfeffer',
+    href: './7-rules-of-power/',
+  },
+  {
+    cover: sevenRulesOfPower,
+    name: '7 Rules of Power',
+    author: 'Jeffrey Pfeffer',
+    href: './7-rules-of-power/',
+  },
+];
 </script>
 
 <style scoped>

@@ -1,3 +1,4 @@
+import { SidebarConfig } from 'vuepress';
 import jvm from './jvm';
 import read from './read';
 
@@ -6,4 +7,4 @@ export default {
   ...jvm,
   // Read
   ...read,
-};
+} as SidebarConfig;

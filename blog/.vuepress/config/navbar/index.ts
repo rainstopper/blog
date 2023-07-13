@@ -1,11 +1,13 @@
+import { NavbarConfig } from 'vuepress';
+
 export default [
   // { text: '前端', link: '/front-end/' },
   {
     text: '后端',
-    items: [
+    children: [
       {
         text: 'Java',
-        items: [
+        children: [
           { text: 'JVM', link: '/java/jvm/' },
         ],
       },
@@ -13,8 +15,8 @@ export default [
   },
   {
     text: '学习',
-    items: [
+    children: [
       { text: '阅读', link: '/read/' },
     ],
   },
-];
+] as NavbarConfig;
