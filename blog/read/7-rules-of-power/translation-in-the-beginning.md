@@ -81,3 +81,5 @@ I figured that one way to fight these perceptions was to provide people seven ru
 ### Have the Principles—the Rules—of Power Changed? 权力法则——规则——变了吗？
 
 Fourth, I wanted to address directly the frequent narrative that today everything is different—fundamentally changed by new values, new generations (and their own new values), and new technologies, particularly social media—and therefore old ideas about power and influence are no longer relevant. That argument is why it is not surprising that people feel ambivalent about my class and writings, given the current attitude in business schools and other programs in leadership and administration. Power—and possibly even more so, organizational (or maybe all) politics—is on the outs.
+
+// P.7
